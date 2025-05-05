@@ -3,10 +3,10 @@ package signer
 import (
   "bytes"
   "crypto/ecdsa"
+  "errors"
 
   "github.com/ethereum/go-ethereum/common"
   "github.com/ethereum/go-ethereum/crypto"
-  "github.com/ethereum/go-ethereum/crypto/secp256k1"
 )
 
 func Sign(privateKey *ecdsa.PrivateKey, hashedData common.Hash) ([]byte, error) {
